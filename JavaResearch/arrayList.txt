@@ -1,0 +1,52 @@
+1. ARRAYLIST IN JAVA {
+    * import java.util.ArrayList;
+    * ArrayList<TYPE> nameOfArrayList = new ArrayList<>();
+    * arraylist.add(index, element);
+    * arraylist.addAll( index, Collection);
+    * arraylist.indexOf(obj);
+    * arraylist.contains(obj);        /* return true or false */
+    * arraylist.get(index); /* return FIRST index or -1 */
+    * arraylist.size();
+    * arraylist.subList(fromIndex, toIndex);  /* Note: the element at toIndex is not included. Can use indexOf(), size() */
+    * arraylist.set(index, newElement);     /* returns the element previously present at index. Can use indexOf() */ 
+    * arraylist.sort(Comparator.naturalOrder());
+    * arraylist.sort(Comparator.reverseOrder());
+    * toArray(); /* return array */
+        ArrayList<String> arrlist = new ArrayList<>();
+        ...
+        String[] arr = new String[arraylist.size()];
+        arrlist.toArray(arr);
+
+    * remove(); {
+        // remove the specified element
+        arraylist.remove(Object obj)  /* returns true if specified element is present in the arraylist */
+
+        // remove element present in the specified index
+        arraylist.remove(int index) /* returns the removed element if index is passed as parameter */
+
+        NOTE : + Integer.valueOf() - Converts the int value 13 to an Integer object.
+                 It is because the remove() method only takes objects as its arguments.
+                 ex: arrlist.remove(Integer.valueOf(13))
+
+                 more info: https://www.programiz.com/java-programming/wrapper#primitive-types-to-wrapper-objects
+
+    }
+
+    * removeIf()  {
+        returns true if an element is removed from the arraylist.
+        ex: numbers.removeIf(e -> (e % 2) == 0);;
+            countries.removeIf(e -> e.contains("land"));;
+
+        more info lambda-expression in java: https://www.programiz.com/java-programming/lambda-expression
+    }
+
+    * forEach() {
+        The forEach() method does not return any value.
+        ex: 
+        numbers.forEach((e) -> {
+            e = e * e;
+            System.out.print(e + " ");  
+        });
+    }
+    https://www.programiz.com/java-programming/library/arraylist
+}
